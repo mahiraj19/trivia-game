@@ -16,7 +16,7 @@ const App: React.FC = () => {
   const [correctCount, setCorrectCount] = useState(0);
   const [incorrectCount, setIncorrectCount] = useState(0);
   const [validationError, setValidationError] = useState<string>('');
-  const [loading, setLoading] = useState(true); // New state to track loading state
+  const [loading, setLoading] = useState(true);
   const [showNextButton, setShowNextButton] = useState(false);
 
   useEffect(() => {
@@ -30,10 +30,10 @@ const App: React.FC = () => {
           incorrect_answers: result.incorrect_answers,
         }));
         setQuestions(formattedQuestions);
-        setLoading(false); // Set loading to false after fetching data
+        setLoading(false);
       } catch (error) {
         console.error('Error fetching questions:', error);
-        setLoading(false); // Set loading to false even on error
+        setLoading(false);
       }
     };
 
