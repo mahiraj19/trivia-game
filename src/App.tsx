@@ -90,8 +90,9 @@ const App: React.FC = () => {
   return (
     <div>
       <h2>{currentQuestion.category}</h2>
-      <p>{currentQuestion.question}</p>
-
+      <p>
+        Question {currentQuestionIndex + 1} of {questions.length}: {currentQuestion.question}
+      </p>
       <div>
         {answerOptions.map((answer) => (
           <div key={answer}>
